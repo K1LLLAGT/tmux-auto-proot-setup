@@ -1,8 +1,8 @@
 Below is a combined plaintext guide that you can save (for example, as `GUIDE.txt` or `README.md`) in your repository. This guide places the instructions for creating a new GitHub project first, then explains how to set up your Termux environment with auto‑login into a proot‑distro (e.g., Ubuntu) and a hybrid pip installer using a Python Flask script. You can copy the entire text into your favorite editor and modify paths or names as needed.
 
-────────────────────────────────────────────────────────────
+
 Guide: Creating a New GitHub Repository and Setting Up Termux
-────────────────────────────────────────────────────────────
+
 
 This guide explains how to get started with Termux by:
   1. Creating a new GitHub repository from Termux.
@@ -10,9 +10,10 @@ This guide explains how to get started with Termux by:
   3. Enhancing your native Termux configuration (your ~/.bashrc) with BusyBox paths, aliases, and a colorful prompt.
   4. Building a hybrid pip installer—a Python Flask script that lets you install pip packages via your mobile browser (using both a curated list and dynamic search).
 
-────────────────────────────────────────────────────────────
+
 PART 1 – Creating a New GitHub Repository from Termux
-────────────────────────────────────────────────────────────
+
+
 
 **Prerequisites:**
 
@@ -83,9 +84,9 @@ If you prefer an automated method:
    gh repo create my_project --public --source=. --remote=origin --push
    ```
 
-────────────────────────────────────────────────────────────
+
 PART 2 – Setting Up an Auto-Login Proot Environment
-────────────────────────────────────────────────────────────
+
 
 This section explains how to configure Termux so that each time you start it, you automatically log into a proot-distro environment (such as Ubuntu).
 
@@ -127,9 +128,8 @@ This section explains how to configure Termux so that each time you start it, yo
 TERMUX_NO_PROOT=1 termux-open .
 ```
 
-────────────────────────────────────────────────────────────
+
 PART 3 – Enhancing Your ~/.bashrc (Native Termux Setup)
-────────────────────────────────────────────────────────────
 
 Below is an enhanced version of the default Termux `.bashrc` which adds BusyBox directories to the PATH along with aliases, functions, and a customized prompt.
 
@@ -207,9 +207,9 @@ Below is an enhanced version of the default Termux `.bashrc` which adds BusyBox 
    source ~/.bashrc
    ```
 
-────────────────────────────────────────────────────────────
+
 PART 4 – Building a Hybrid Pip Installer (Python Flask Script)
-────────────────────────────────────────────────────────────
+
 
 This Python script sets up a web interface for installing pip packages from a curated list or by dynamically searching PyPI.
 
@@ -389,9 +389,9 @@ This Python script sets up a web interface for installing pip packages from a cu
    ```
    Your default browser should open to [http://127.0.0.1:5000/](http://127.0.0.1:5000/) where you can use the interface to install pip packages.
 
-────────────────────────────────────────────────────────────
+
 PART 5 – When to Use Native Termux vs. the Proot Environment
-────────────────────────────────────────────────────────────
+
 
 Use **native Termux** when you need:  
   - Direct access to Android APIs (e.g., using `termux-clipboard-set`).  
@@ -402,9 +402,8 @@ Use your **proot environment** (e.g., Ubuntu) when you need:
   - A full Linux desktop/server experience.  
   - A separate space for installing and running software independently of Termux packages.
 
-────────────────────────────────────────────────────────────
+
 Final Notes
-────────────────────────────────────────────────────────────
 
 - **Auto-login Behavior:**  
   To bypass the auto-login into your proot-distro, run Termux with:
@@ -422,6 +421,6 @@ Final Notes
   ```
 
 Happy coding and enjoy your enhanced Termux experience!
-────────────────────────────────────────────────────────────
+
 
 You now have one comprehensive guide that explains how to create a GitHub repository from Termux, configure your environment for both native Termux and a proot-distro, and set up a hybrid pip installer using Python Flask.
